@@ -1,0 +1,33 @@
+<header class="navbar text-light py-3 m-3 shadow">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+       <div class="logoenmenu">
+            <a href="{{ url_for('index') }}" class="text-decoration-none text-white text-align-start">
+                <img src="{{ url_for('static', filename='img/logo1-pcam-g.png') }}" alt="Logo" width="65" height="65" class="col-6" style="height: 65px; width: 65px;">
+                
+            </a>
+        </div>
+      <div class="position-absolute end-1 mt-2 p-2 mx-5 px-5 ">
+        <nav class="d-flex flex-wrap justify-content-end align-items-start gap-4">
+          <a href="{{ url_for('video') }}" class="text-light text-decoration-none">Videos</a>
+          <a href="{{ url_for('foto') }}" class="text-light text-decoration-none">Fotos</a>
+          <a href="#" class="text-light text-decoration-none">Nosotros</a>
+        </nav> 
+      </div>
+
+      {% if session.get('nombre_usuario') %}
+      <details class="position-relative">
+        <summary class="btn btn-secondary">
+          Bienvenid@, {{ session.get('nombre_usuario') }}
+        </summary>
+        <div class="card shadow-sm position-absolute end-0 mt-2 p-2 " style="z-index: 10;">
+        
+          <a href="{{ url_for('cerrar_sesion') }}" class="btn btn-outline-white btn-sm btn-secondary">
+            Cerrar sesion
+          </a>
+        </div>
+      </details>
+      {% else %}
+      <a href="{{ url_for('login') }}" class="btn btn-secondary">Iniciar sesion</a>
+      {% endif %}
+  </div>
+</header>

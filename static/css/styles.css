@@ -1,0 +1,181 @@
+  .hero-section {
+    height: 500px;
+    background-image: url('/static/img/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+.logo-titulo {
+  font-family: 'Poppins', sans-serif; /* Fuente moderna */
+  font-size: 2rem;                  /* Tamaño tipo h3 */
+  font-weight: 700;                   /* Negrita */
+  letter-spacing: 3px;                /* Espaciado entre letras */
+  margin: 0;
+}
+
+.letras1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 60px;
+}
+
+.header-index {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+.fondo_1 {
+    background-color: #333a43;
+    border: 1px solid #2f3338;
+  }
+
+.bton_azul {
+    background-color: #4568d2;
+    color: rgb(202, 202, 202);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }  
+
+
+.form-control {
+  background-color: #e0e0e0; /* gris claro */
+  color: #000;              /* texto negro */
+}
+
+.form-control:focus {
+  background-color: #d6d6d6; /* un poco más oscuro al hacer foco */
+  color: #000;
+}
+
+
+.bton_gris {
+    background-color: #afb2b0;
+    color: rgb(95, 95, 95);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }  
+
+.color_negro{
+    background: #000000;
+}
+
+.bton_rojo {
+    background-color: #8b2933;
+    color: rgb(180, 175, 175);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }  
+
+  body {
+            background-color: #12151a; 
+            color: #e9ecef;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .header-container {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+        .text-gray { color: #8b949e; }
+        
+        /* Estilos del Toggle */
+        .toggle-wrapper {
+            background-color: #1c2128;
+            border-radius: 2rem;
+            padding: 0.25rem;
+            display: inline-flex;
+            align-items: center;
+        }
+        .toggle-btn {
+            border: none;
+            background: transparent;
+            color: #adb5bd;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .toggle-btn.active {
+            background-color: #0d6efd; /* Cambiado a azul */
+            color: #fff;
+            font-weight: 500;
+        }
+        .badge-always-free {
+            background-color: rgba(13, 110, 253, 0.2); /* Fondo azul claro */
+            color: #6ea8fe; /* Texto azul */
+            font-size: 0.65em;
+            letter-spacing: 0.5px;
+            margin-left: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+            font-weight: bold;
+        }
+
+        /* Área de subida */
+        .upload-area {
+            
+            border-radius: 1.5rem;
+            background-color: #161b22;
+            padding: 5rem 2rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .upload-area:hover {
+            background-color: #1d232c;
+        }
+
+        .btn-upload {
+            background-color: #ffffff;
+            color: #000000;
+            font-weight: 600;
+            border-radius: 2rem;
+            padding: 0.6rem 2rem;
+            border: none;
+            transition: background-color 0.2s;
+        }
+        .btn-upload:hover { background-color: #e9ecef; }
+
+        /* Tarjetas laterales */
+        .side-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+
+
+        .badge-ai {
+            background-color: rgba(13, 110, 253, 0.2);
+            color: #6ea8fe;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.5rem;
+        }
+        .btn-action {
+            background-color: #3bb135; /* Botón principal azul */
+            color: white;
+            border: none;
+            width: 100%;
+            border-radius: 0.5rem;
+            padding: 0.7rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .btn-action:hover {
+            background-color: #3bb135;
+        }
+        .security-icon {
+            color: #3bb135; /* Ícono de seguridad en azul */
+            font-size: 1.2rem;
+            margin-right: 0.75rem;
+        }

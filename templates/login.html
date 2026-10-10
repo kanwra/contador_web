@@ -1,0 +1,64 @@
+{% extends "_header.html" %}
+{% block title %}Contador de Objetos - Iniciar sesion{% endblock %}
+
+{% block content %}
+
+  <div class="mx-5 p-4 px-3 py-3">
+    <div class="text-start">
+      <a href="{{ url_for('index') }}" class="text-light text-decoration-none">
+        Volver al inicio
+      </a>
+    </div>  
+  </div>  
+<main class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <section class="login-card bg-light text-dark p-4 shadow">
+        <div class="text-center">
+          <h1 class="h3 mb-2">Iniciar sesion</h1>
+          <p class="text-muted mb-4">Entra con tu correo y contrasena.</p>
+        </div>
+        
+
+        {% with mensajes = get_flashed_messages() %}
+          {% if mensajes %}
+            <div class="alert alert-warning">
+              {% for mensaje in mensajes %}
+                <div>{{ mensaje }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('login') }}">
+          <div class="mb-3">
+            <label for="email" class="form-label fw-medium">Correo</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="nombre@correo.com" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="form-label fw-medium">Contrasena</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+
+          <button type="submit" class="btn btn-secondary w-100">Entrar</button>
+        </form>
+        <div class="row ms-4">
+            <div class="col-6">
+              <p class="text-center text-muted mt-4 mb-0">
+                No tienes cuenta?
+                <a href="{{ url_for('sing') }}">Registrate</a>
+              </p>
+            </div>
+            <div class="col-6">
+               <p class="text-center text-muted mt-4 mb-0">
+                Olvidaste la contraseña?
+                <a href="{{ url_for('sing') }}">Recuperar contraseña</a>
+              </p>
+            </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+{% endblock %}

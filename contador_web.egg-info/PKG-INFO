@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: contador-web
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.14
+Description-Content-Type: text/markdown
+Requires-Dist: bcrypt>=5.0.0
+Requires-Dist: flask>=3.1.3
+Requires-Dist: itsdangerous>=2.2.0
+Requires-Dist: opencv-python>=5.0.0.93
+Requires-Dist: pymongo>=4.18.2
+Requires-Dist: ultralytics>=8.4.166

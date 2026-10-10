@@ -1,0 +1,18 @@
+[project]
+name = "contador-web"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "bcrypt>=5.0.0",
+    "flask>=3.1.3",
+    "itsdangerous>=2.2.0",
+    "opencv-python>=5.0.0.93",
+    "pymongo>=4.18.2",
+    "ultralytics>=8.4.166",
+]
+
+[tool.setuptools]
+py-modules = ["app"]
+

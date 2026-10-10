@@ -1,0 +1,8 @@
+README.md
+app.py
+pyproject.toml
+contador_web.egg-info/PKG-INFO
+contador_web.egg-info/SOURCES.txt
+contador_web.egg-info/dependency_links.txt
+contador_web.egg-info/requires.txt
+contador_web.egg-info/top_level.txt
