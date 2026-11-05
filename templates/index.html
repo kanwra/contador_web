@@ -15,14 +15,11 @@
     </div>
 
         <div class="row text-center justify-content-center">
-      <div class="card bg-dark m-4 p-2 col-3">
-        <a href="{{ url_for('foto') }}" class="text-light text-decoration-none">Fotos</a>
+      <div class=" m-4 p-2 col-3">
+        <a href="{{ url_for('foto') }}" class="text-light text-decoration-none">subir foto</a>
       </div>
-      <div class="card bg-dark m-4 p-2 col-3">
-        <a href="{{ url_for('video') }}" class="text-light text-decoration-none">videos</a>
-      </div>
-      <div class="card bg-dark m-4 p-2 col-3">
-        <a href="#" class="text-light text-decoration-none">camara</a>
+      <div class=" m-4 p-2 col-3">
+        <a href="#" class="text-light text-decoration-none">camara en vivo</a>
       </div>
     </div>
 
@@ -31,17 +28,13 @@
         <h3>Funcionalidades que te ofrece</h3>
       </div>
       <div class="row ms-3 align-items-center justify-content-center text-center">
-        <div class="side-card col-3 shadow-lg p-3 m-2">
+        <div class="col-3 shadow-lg p-3 m-2">
           <h1><i class="bi bi-camera-fill"></i></h1>
           <p class="fw-bold">conteos subiendo una foto</p>
           Sube una foto, deja que la IA estime el total o toca cada elemento con el contador manual gratuito.
         </div>
-        <div class="side-card col-3 shadow-lg p-3 m-2">
-          <h1><i class="bi bi-camera-video-fill"></i></h1>
-          <p class="fw-bold">conteos subiendo un video</p>
-          Sube una foto, deja que la IA estime el total o toca cada elemento con el contador manual gratuito.
-        </div>
-        <div class="side-card col-3 shadow-lg p-3 m-2">
+
+        <div class="col-3 shadow-lg p-3 m-2">
           <h1><i class="bi bi-webcam-fill"></i></h1>
           <p class="fw-bold">conteos en camara en vivo</p>
           Sube una foto, deja que la IA estime el total o toca cada elemento con el contador manual gratuito.
@@ -130,26 +123,159 @@
       </div>
     </div>
   </div>
-
-
-      <div class="text-white ">
+      <div class="text-white">
         <div class="text-center fw-bold m-5">
-          <h3>limitaciones actuales</h3>
+          <h3>Limitaciones actuales</h3>
         </div>
       </div>
 
-     <div class="text-white ">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4 text-white">
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h5 class="fw-bold"><i class="bi bi-eye-slash me-2"></i>Objetos ocultos</h5>
+              <p class="mb-0">Si los objetos están apilados o tapados por otros, la IA puede no detectarlos todos.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h5 class="fw-bold"><i class="bi bi-brightness-low me-2"></i>Mala iluminación</h5>
+              <p class="mb-0">Con poca luz, sombras fuertes o imágenes borrosas la precisión disminuye.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h5 class="fw-bold"><i class="bi bi-box-seam me-2"></i>Tipos de objetos</h5>
+              <p class="mb-0">El modelo solo reconoce las clases con las que fue entrenado; objetos muy raros pueden no detectarse.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h5 class="fw-bold"><i class="bi bi-hourglass-split me-2"></i>Tiempo de procesamiento</h5>
+              <p class="mb-0">Los videos largos o de alta resolución tardan más en analizarse.</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-white-50 mt-4">
+          El resultado es una estimación; te recomendamos revisarlo en conteos críticos.
+        </p>
+      </div>
+
+      <!-- FUNCIONAMIENTO -->
+      <div class="text-white">
         <div class="text-center fw-bold m-5">
-          <h3>funcionamiento</h3>
+          <h3>Funcionamiento</h3>
         </div>
       </div>
 
-      <div class="text-white ">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4 text-center text-white">
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h1><i class="bi bi-upload"></i></h1>
+              <h5 class="fw-bold">1. Sube</h5>
+              <p class="mb-0">Elige una foto o un video, o activa la cámara en vivo.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h1><i class="bi bi-cpu"></i></h1>
+              <h5 class="fw-bold">2. Analiza</h5>
+              <p class="mb-0">La IA (YOLO) detecta cada objeto en la imagen.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h1><i class="bi bi-123"></i></h1>
+              <h5 class="fw-bold">3. Cuenta</h5>
+              <p class="mb-0">Se suman los objetos detectados y se muestra el total.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="side-card p-3 h-100">
+              <h1><i class="bi bi-database-check"></i></h1>
+              <h5 class="fw-bold">4. Guarda</h5>
+              <p class="mb-0">Si tienes sesión iniciada, tu conteo queda guardado en la base de datos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <div class="text-white">
         <div class="text-center fw-bold m-5">
-          <h3>preguntas frecuntes</h3>
+          <h3>Preguntas frecuentes</h3>
+        </div>
+      </div>
+
+      <div class="container pb-5">
+        <div class="accordion accordion-flush" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                ¿Qué tan precisa es la IA?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Depende de la calidad de la imagen y de cómo estén acomodados los objetos. Con buena luz y objetos visibles, los resultados son muy confiables.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                ¿Qué formatos puedo subir?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Fotos en JPG, PNG, WebP, HEIC o HEIF.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                ¿Necesito una cuenta para usarlo?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Para contar no es obligatorio.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                ¿Mis fotos son públicas?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                No. Las imágenes se procesan de forma segura para un análisis único y no se muestran públicamente.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                ¿Puedo contar en tiempo real con la cámara?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Sí, la opción de cámara en vivo permite contar objetos mientras los muestras frente a la cámara.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 </div>
-  
 {% endblock %}
 
